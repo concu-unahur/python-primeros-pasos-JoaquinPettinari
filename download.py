@@ -35,13 +35,41 @@ def bajar_imagen(img_url):
         # print(f'{img_name} fue bajada...')
 
 
+
 tiempo = Contador()
 
 tiempo.iniciar()
-
+"""
 # una por una
 for url in img_urls:
     bajar_imagen(url)
+
+"""
+contadorImagen = 0
+
+def bajarImagen():
+    global img_urls
+    global contadorImagen
+
+    url = img_urls[contadorImagen]
+    bajar_imagen(url)
+    contadorImagen += 1
+
+thread = []
+
+for i in range(15):
+    thread.append(threading.Thread(target=bajarImagen))
+    
+for thread in thread:
+    thread.start()
+    thread.join()
+
+
+
+
+
+
+
 
 tiempo.finalizar()
 tiempo.imprimir()

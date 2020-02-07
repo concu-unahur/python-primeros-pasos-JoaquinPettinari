@@ -1,6 +1,7 @@
 import threading
 import time
 import logging
+from definiciones import Thread
 
 logging.basicConfig(format='%(asctime)s.%(msecs)03d [%(threadName)s] - %(message)s', datefmt='%H:%M:%S', level=logging.INFO)
 
@@ -28,3 +29,6 @@ threadObj = UnThread()
 logging.info('Lanzando los threads')
 threadFunc.start()
 threadObj.start()
+
+thread11 = Thread('Joaquin')
+thread11.start()
