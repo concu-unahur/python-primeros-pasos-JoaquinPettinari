@@ -15,7 +15,8 @@ def dormirEj2(segundos):
 
 contador = Contador()
 contador.iniciar()
-""" Ejercicio 1
+"""Ejercicio 1"""
+
 for i in range(10):
     thread = threading.Thread(target=dormir)
     thread.start()
@@ -29,7 +30,7 @@ for i in range(10):
     thread.start()
     thread.join()
 
-
+"""
     
 contador.finalizar()
 contador.imprimir()

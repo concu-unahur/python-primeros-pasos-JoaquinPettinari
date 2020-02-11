@@ -13,6 +13,6 @@ class Thread(threading.Thread):
         logging.info('Hola1')
         logging.info('Hola2')
 
-
+    
 t1 = Thread('Joaco')
 t1.start()
